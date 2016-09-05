@@ -32,7 +32,7 @@ function [res] = flows(t, stocks)
     v = stocks(2);
     
     dx = v;
-    dv = (-a*x) - (b * v^2); 
+    dv = (-a*x) - (b * v^2);2
     
     res = [dx; dv];
 end
