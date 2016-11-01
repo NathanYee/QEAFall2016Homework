@@ -1,10 +1,6 @@
 (* ::Package:: *)
 
 (* ::Chapter:: *)
-(*This code was adapted from Eric Miller, HALtheWise*)
-
-
-(* ::Chapter:: *)
 (*General Mathematica helpers*)
 
 
@@ -16,22 +12,8 @@ Export[FileNameJoin[{NotebookDirectory[],name}],EvaluationNotebook[]]
 ]
 
 
-(* ::Chapter:: *)
-(*Frequency Analysis*)
-
-
-(* ::Input::Initialization:: *)
-fftShift[data_]:=Module[{},RotateRight[Fourier[data],Floor[Length[data]/2]]]
-plotFFT[data_]:=
-Module[{fft,N},
-fft = fftShift[data];
-N = Length[data];
-Rasterize@ListLinePlot[Transpose@{Subdivide[-Pi,Pi,N-1],Abs@fft},PlotRange->Full,ImageSize->Large,AxesLabel->{"Frequency (rad/sample)","Amplitude"}]
-]
-
-
-(* ::Chapter:: *)
-(*Vector Equations*)
+(* ::Subsection:: *)
+(*Vector equations*)
 
 
 splitVectorEqn[eqn_]:=Module[{},
@@ -39,25 +21,15 @@ If[Head[eqn]==Equal,Thread[eqn],eqn]
 ]
 
 
-(* ::Chapter:: *)
+(* ::Subsection:: *)
 (*Polar Coordinates*)
 
 
-splitVectorEqn[eqn_]:=Module[{},
-If[Head[eqn]==Equal,Thread[eqn],eqn]
-]
+rhat={1,0};
+\[Theta]hat={0,1};
 
 
 polaraccel[]:=r''[t]rhat+2 r'[t] \[Theta]'[t] \[Theta]hat+r[t]\[Theta]''[t] \[Theta]hat-r[t] \[Theta]'[t]^2 rhat
-
-
-(* ::Title:: *)
-(*Sound*)
-
-
-(* ::Input::Initialization:: *)
-playSound[data_]:=Module[{path=StringReplace["/tmp/sound{rand}.wav","{rand}"-> ToString@RandomInteger[999]]},Export[path,data];SystemOpen[path]]
-playSound[data_,fs_]:=playSound[Sound@SampledSoundList[data,fs]]
 
 
 (* ::Subsection:: *)

@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[    178550,       4143]
-NotebookOptionsPosition[    170060,       3859]
-NotebookOutlinePosition[    170423,       3875]
-CellTagsIndexPosition[    170380,       3872]
+NotebookDataLength[    175662,       4045]
+NotebookOptionsPosition[    167411,       3769]
+NotebookOutlinePosition[    167774,       3785]
+CellTagsIndexPosition[    167731,       3782]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -3763,101 +3763,11 @@ Cell[BoxData["\<\"/home/nathan/olin/fall2016/qEAFall2016Homework/\
 attitudeControl/differentialEquations/differentialEquations.pdf\"\>"], \
 "Output",
  CellChangeTimes->{3.686259554735805*^9}]
-}, Open  ]],
-
-Cell[CellGroupData[{
-
-Cell[BoxData[
- RowBox[{"DSolve", "[", 
-  RowBox[{
-   RowBox[{
-    RowBox[{
-     RowBox[{
-      RowBox[{"y", "'"}], "[", "x", "]"}], "+", 
-     RowBox[{"2", 
-      RowBox[{"y", "[", "x", "]"}]}]}], "\[Equal]", 
-    RowBox[{"sin", "[", "x", "]"}]}], ",", 
-   RowBox[{"y", "[", "x", "]"}], ",", "x"}], "]"}]], "Input",
- CellChangeTimes->{{3.6862604139087*^9, 3.686260415540217*^9}}],
-
-Cell[BoxData[
- RowBox[{"{", 
-  RowBox[{"{", 
-   RowBox[{
-    RowBox[{"y", "[", "x", "]"}], "\[Rule]", 
-    RowBox[{
-     RowBox[{
-      SuperscriptBox["\[ExponentialE]", 
-       RowBox[{
-        RowBox[{"-", "2"}], " ", "x"}]], " ", 
-      RowBox[{"C", "[", "1", "]"}]}], "+", 
-     RowBox[{
-      SuperscriptBox["\[ExponentialE]", 
-       RowBox[{
-        RowBox[{"-", "2"}], " ", "x"}]], " ", 
-      RowBox[{
-       SubsuperscriptBox["\[Integral]", "1", "x"], 
-       RowBox[{
-        RowBox[{
-         SuperscriptBox["\[ExponentialE]", 
-          RowBox[{"2", " ", 
-           RowBox[{"K", "[", "1", "]"}]}]], " ", 
-         RowBox[{"sin", "[", 
-          RowBox[{"K", "[", "1", "]"}], "]"}]}], 
-        RowBox[{"\[DifferentialD]", 
-         RowBox[{"K", "[", "1", "]"}]}]}]}]}]}]}], "}"}], "}"}]], "Output",
- CellChangeTimes->{3.686260416160527*^9}]
-}, Open  ]],
-
-Cell[CellGroupData[{
-
-Cell[BoxData[
- RowBox[{"DSolve", "[", 
-  RowBox[{
-   RowBox[{
-    RowBox[{
-     RowBox[{
-      RowBox[{"y", "'"}], "[", "t", "]"}], "+", 
-     RowBox[{"2", 
-      RowBox[{"y", "[", "t", "]"}]}]}], "\[Equal]", 
-    RowBox[{"sin", "[", "t", "]"}]}], ",", "y", ",", "t"}], "]"}]], "Input",
- CellChangeTimes->{{3.686260422330399*^9, 3.68626043519108*^9}}],
-
-Cell[BoxData[
- RowBox[{"{", 
-  RowBox[{"{", 
-   RowBox[{"y", "\[Rule]", 
-    RowBox[{"Function", "[", 
-     RowBox[{
-      RowBox[{"{", "t", "}"}], ",", 
-      RowBox[{
-       RowBox[{
-        SuperscriptBox["\[ExponentialE]", 
-         RowBox[{
-          RowBox[{"-", "2"}], " ", "t"}]], " ", 
-        RowBox[{"C", "[", "1", "]"}]}], "+", 
-       RowBox[{
-        SuperscriptBox["\[ExponentialE]", 
-         RowBox[{
-          RowBox[{"-", "2"}], " ", "t"}]], " ", 
-        RowBox[{
-         SubsuperscriptBox["\[Integral]", "1", "t"], 
-         RowBox[{
-          RowBox[{
-           SuperscriptBox["\[ExponentialE]", 
-            RowBox[{"2", " ", 
-             RowBox[{"K", "[", "1", "]"}]}]], " ", 
-           RowBox[{"sin", "[", 
-            RowBox[{"K", "[", "1", "]"}], "]"}]}], 
-          RowBox[{"\[DifferentialD]", 
-           RowBox[{"K", "[", "1", "]"}]}]}]}]}]}]}], "]"}]}], "}"}], 
-  "}"}]], "Output",
- CellChangeTimes->{{3.6862604242768383`*^9, 3.6862604357757683`*^9}}]
 }, Open  ]]
 }, Open  ]]
 }, Open  ]]
 },
-WindowSize->{636, 1041},
+WindowSize->{956, 1041},
 WindowMargins->{{2, Automatic}, {2, Automatic}},
 Magnification:>1.5 Inherited,
 FrontEndVersion->"11.0 for Linux x86 (64-bit) (July 28, 2016)",
@@ -4127,21 +4037,13 @@ Cell[166021, 3718, 87, 1, 77, "Input"],
 Cell[166111, 3721, 116, 3, 46, "Input"],
 Cell[166230, 3726, 116, 3, 46, "Input"],
 Cell[CellGroupData[{
-Cell[166371, 3733, 440, 13, 163, "Input"],
+Cell[166371, 3733, 440, 13, 89, "Input"],
 Cell[166814, 3748, 94, 1, 46, "Output"]
 }, Open  ]],
 Cell[166923, 3752, 96, 1, 46, "Input"],
 Cell[CellGroupData[{
 Cell[167044, 3757, 133, 2, 46, "Input"],
-Cell[167180, 3761, 191, 3, 167, "Output"]
-}, Open  ]],
-Cell[CellGroupData[{
-Cell[167408, 3769, 379, 11, 89, "Input"],
-Cell[167790, 3782, 853, 26, 120, "Output"]
-}, Open  ]],
-Cell[CellGroupData[{
-Cell[168680, 3813, 351, 10, 89, "Input"],
-Cell[169034, 3825, 986, 29, 122, "Output"]
+Cell[167180, 3761, 191, 3, 164, "Output"]
 }, Open  ]]
 }, Open  ]]
 }, Open  ]]
