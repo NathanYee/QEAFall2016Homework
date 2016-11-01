@@ -1,0 +1,183 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 11.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[      4991,        175]
+NotebookOptionsPosition[      4268,        144]
+NotebookOutlinePosition[      4594,        159]
+CellTagsIndexPosition[      4551,        156]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell["QEA - Attitude Control - B-set 3", "Title",
+ CellChangeTimes->{{3.684337271199016*^9, 3.684337308059457*^9}, {
+  3.684693548172474*^9, 3.6846935483005342`*^9}, {3.685106259426097*^9, 
+  3.685106259448977*^9}}],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"SetDirectory", "@", 
+   RowBox[{"NotebookDirectory", "[", "]"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{"<<", "\"\<../General.m\>\""}]}], "Input",
+ InitializationCell->True,
+ CellChangeTimes->{{3.682710916634346*^9, 3.682710945444784*^9}, {
+  3.682711378657494*^9, 3.682711389969411*^9}, {3.684337330844143*^9, 
+  3.684337348017961*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Lx", "=", 
+  RowBox[{"m", 
+   RowBox[{"(", 
+    RowBox[{
+     RowBox[{
+      RowBox[{"(", 
+       RowBox[{
+        SuperscriptBox["rx", "2"], "+", 
+        SuperscriptBox["ry", "2"], "+", 
+        SuperscriptBox["rz", "2"]}], ")"}], "\[Omega]x"}], "-", 
+     RowBox[{"rx", 
+      RowBox[{"(", 
+       RowBox[{
+        RowBox[{"rx", " ", "\[Omega]x"}], "+", 
+        RowBox[{"ry", " ", "\[Omega]y"}], "+", 
+        RowBox[{"rz", " ", "\[Omega]z"}]}], ")"}]}]}], ")"}]}]}]], "Input",
+ CellChangeTimes->{{3.685116496307004*^9, 3.68511657700113*^9}, {
+  3.685116698364045*^9, 3.685116705256019*^9}}],
+
+Cell[BoxData[
+ RowBox[{"m", " ", 
+  RowBox[{"(", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"(", 
+      RowBox[{
+       SuperscriptBox["rx", "2"], "+", 
+       SuperscriptBox["ry", "2"], "+", 
+       SuperscriptBox["rz", "2"]}], ")"}], " ", "\[Omega]x"}], "-", 
+    RowBox[{"rx", " ", 
+     RowBox[{"(", 
+      RowBox[{
+       RowBox[{"rx", " ", "\[Omega]x"}], "+", 
+       RowBox[{"ry", " ", "\[Omega]y"}], "+", 
+       RowBox[{"rz", " ", "\[Omega]z"}]}], ")"}]}]}], ")"}]}]], "Output",
+ CellChangeTimes->{3.685116725024892*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Solve", "[", 
+  RowBox[{
+   RowBox[{"Lx", "\[Equal]", 
+    RowBox[{
+     RowBox[{"(", GridBox[{
+        {"Ixx", "Ixy", "Ixz"}
+       }], ")"}], ".", 
+     RowBox[{"(", GridBox[{
+        {"\[Omega]x"},
+        {"\[Omega]y"},
+        {"\[Omega]z"}
+       }], ")"}]}]}], ",", 
+   RowBox[{"{", 
+    RowBox[{"Ixx", ",", "Ixy", ",", "Ixz"}], "}"}]}], "]"}]], "Input",
+ CellChangeTimes->{{3.68511660385891*^9, 3.6851166638703423`*^9}, {
+  3.685116708867869*^9, 3.6851167266730137`*^9}}],
+
+Cell[BoxData[
+ TemplateBox[{
+  "Solve","svars",
+   "\"Equations may not give solutions for all \\\"solve\\\" variables.\"",2,
+   8,8,20725116572687050505,"Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{3.685116727009437*^9}],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{"{", 
+   RowBox[{"Ixz", "\[Rule]", 
+    RowBox[{
+     RowBox[{"-", 
+      FractionBox[
+       RowBox[{"Ixx", " ", "\[Omega]x"}], "\[Omega]z"]}], "-", 
+     FractionBox[
+      RowBox[{"Ixy", " ", "\[Omega]y"}], "\[Omega]z"], "-", 
+     FractionBox[
+      RowBox[{
+       RowBox[{
+        RowBox[{"-", "m"}], " ", 
+        SuperscriptBox["ry", "2"], " ", "\[Omega]x"}], "-", 
+       RowBox[{"m", " ", 
+        SuperscriptBox["rz", "2"], " ", "\[Omega]x"}], "+", 
+       RowBox[{"m", " ", "rx", " ", "ry", " ", "\[Omega]y"}], "+", 
+       RowBox[{"m", " ", "rx", " ", "rz", " ", "\[Omega]z"}]}], 
+      "\[Omega]z"]}]}], "}"}], "}"}]], "Output",
+ CellChangeTimes->{3.685116727046961*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{".3", "*", ".3", "*", "3", "*", "\[Pi]", "*", "3", "*", "2", " ", 
+  "\[Pi]"}]], "Input",
+ CellChangeTimes->{{3.685126572612859*^9, 3.6851265934283657`*^9}}],
+
+Cell[BoxData["15.98875912976476`"], "Output",
+ CellChangeTimes->{3.685126594224683*^9}]
+}, Open  ]],
+
+Cell[BoxData["2"], "Input",
+ CellChangeTimes->{3.685141937463976*^9}]
+}, Open  ]]
+},
+WindowSize->{956, 1041},
+WindowMargins->{{2, Automatic}, {2, 37}},
+FrontEndVersion->"11.0 for Linux x86 (64-bit) (July 28, 2016)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[580, 22, 215, 3, 93, "Title"],
+Cell[798, 27, 376, 8, 67, "Input",
+ InitializationCell->True],
+Cell[CellGroupData[{
+Cell[1199, 39, 619, 18, 42, "Input"],
+Cell[1821, 59, 525, 16, 42, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[2383, 80, 503, 16, 69, "Input"],
+Cell[2889, 98, 246, 6, 23, "Message"],
+Cell[3138, 106, 723, 20, 56, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[3898, 131, 180, 3, 30, "Input"],
+Cell[4081, 136, 87, 1, 30, "Output"]
+}, Open  ]],
+Cell[4183, 140, 69, 1, 30, "Input"]
+}, Open  ]]
+}
+]
+*)
+
